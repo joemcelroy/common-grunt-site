@@ -1,6 +1,8 @@
-module.exports = (grunt, rootDir, files) ->
+module.exports = (grunt, rootDir) ->
 
-  vendorPath = "#{rootDir}/dist/vendor/vendor_dev.js"
+  files = grunt.config.get("MicrositeConfig").vendorScripts
+
+  vendorPath = "#{rootDir}/dist/vendor_dev.js"
 
   vendorScriptFiles = {}
   vendorScriptFiles[vendorPath] = files
@@ -9,6 +11,13 @@ module.exports = (grunt, rootDir, files) ->
 
   grunt.config "concat.vendor-scripts", {
     files: vendorScriptFiles
+  }
+
+  grunt.config "watch.vendor-scripts", {
+    files: files
+    tasks: ["vendor-scripts"]
+    options: 
+      spawn: false
   }
 
   grunt.registerTask "vendor-scripts", [

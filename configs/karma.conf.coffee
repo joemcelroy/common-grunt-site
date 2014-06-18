@@ -1,22 +1,20 @@
 module.exports = (config) ->
 
   config.set
+    files: [
+      'dist/locale-resources/en-us.js'
+      'dist/vendor_dev.js'
+      'dist/app_dev.js'
+      'dist/templates_dev.js'
 
-    basePath: "../../"
+      'assets/bower_components/angular-mocks/angular-mocks.js'
+      'assets/bower_components/sinonjs/sinon.js'
+
+      'app/test/unit/**/*.coffee'
+    ]
 
     frameworks: [
       'jasmine'
-    ]
-
-    files: [
-      'dist/vendor_dev.js'
-      '../i18n/MobileManager.resource.en-us.js'
-      '../i18n/angular-locale_en-us.js'
-      'assets/bower_components/angular-mocks/angular-mocks.js'
-      'assets/bower_components/sinonjs/sinon.js'
-      'dist/templates.js'
-      'dist/app_dev.js'
-      'test/unit/**/*.coffee'
     ]
 
     reporters: [
@@ -26,11 +24,6 @@ module.exports = (config) ->
     browsers: [
       "PhantomJS"
     ]
-
-    preprocessors:
-      'test/unit/**/*.coffee': 'coffee'
-
-    logLevel: config.LOG_WARN
 
     plugins: [
       'karma-chrome-launcher'

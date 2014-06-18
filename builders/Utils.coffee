@@ -9,4 +9,21 @@ module.exports = (grunt)->
     process.chdir(cwd)
 
   loadBuilder:(name, dir, files)->
-    require("./#{name}")(grunt, dir, files)
+    require("./#{name}")(grunt, dir, files)    
+
+  loadTasks: (rootDir) ->
+    @loadBuilder "coffeescript-app", rootDir
+    @loadBuilder "vendor-scripts", rootDir
+    @loadBuilder "test-unit", rootDir
+    @loadBuilder "test-coverage", rootDir
+    @loadBuilder "connect", rootDir
+    @loadBuilder "sass", rootDir
+
+    grunt.registerTask "dev", [
+      "vendor-scripts"
+      "coffeescript-app"
+      "templates-app"
+      "unit-tests"
+      "connect:server"
+      "watch"
+    ]
