@@ -1,0 +1,41 @@
+{
+  "name": "common-grunt-site",
+  "author": {
+    "name": "Joseph McElroy",
+    "email": "jmcelroy@opentable.com"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "readmeFilename": "README.md",
+  "version": "0.0.1",
+  "devDependencies": {
+    "assetgraph-builder": "ssetem/assetgraph-builder",
+    "grunt-autoprefixer": "^0.7.2",
+    "grunt-coffeelint": "0.0.8",
+    "grunt-contrib": "0.9.0",
+    "grunt-contrib-rename": "0.0.3",
+    "grunt-html2js": "0.2.4",
+    "grunt-karma": "0.6.2",
+    "grunt-newer": "~0.6.1",
+    "grunt-ngmin": "0.0.3",
+    "grunt-protractor-runner": "0.2.4",
+    "grunt-reduce": "^0.1.18",
+    "grunt-smartling": "phoey/grunt-smartling",
+    "ip": "0.3.0",
+    "karma": "~0.10.x",
+    "karma-coffee-preprocessor": "0.1.3",
+    "karma-coverage": "0.2.0",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-teamcity-reporter": "0.1.2",
+    "matchdep": "0.3.0",
+    "phantomjs": "1.9.7-8",
+    "protractor": "0.23.1",
+    "coffee-script":"1.7.1",
+    "grunt": "~0.4.3"
+  }
+}
