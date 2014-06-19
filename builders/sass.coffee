@@ -21,7 +21,9 @@ module.exports = (grunt, rootDir) ->
 
   grunt.config "watch.scss", {
     files: ["#{rootDir}/assets/styles/**/*.scss"]
-    tasks:["sass"]
+    tasks:["sass", "notifyCssChanges"]
+    options:
+      spawn: false
   }
 
   grunt.registerTask "sass", [

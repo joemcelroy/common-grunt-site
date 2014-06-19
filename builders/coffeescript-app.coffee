@@ -23,14 +23,14 @@ module.exports = (grunt, rootDir) ->
 
   grunt.config "watch.coffeescript-app", {
     files: ["#{rootDir}/app/src/**/*.coffee"]
-    tasks: ["coffeescript-app", "karma:unit-tests:run"]
+    tasks: ["coffeescript-app", "notifyJSChanges", "karma:unit-tests:run"]
     options: 
       spawn: false
   }
 
   grunt.config "watch.templates-app", {
     files: ["#{rootDir}/app/**/*.html"]
-    tasks: ["html2js:app", "karma:unit-tests:run"]
+    tasks: ["html2js:app", "notifyJSChanges", "karma:unit-tests:run"]
     options: 
       spawn: false
   }

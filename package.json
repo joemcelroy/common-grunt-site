@@ -38,6 +38,7 @@
     "coffee-script":"1.7.1",
     "grunt": "~0.4.3",
     "underscore":"1.6.0",
-    "phantomjs": "1.9.7-8"
+    "phantomjs": "1.9.7-8",
+    "tiny-lr":"0.0.7"
   }
 }
